@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrazy mistrů – Deník návštěv galerií</title>
+    <meta name="description" content="Detailní průvodce historií, ikonografií a tajemstvím mistrovských děl ze sbírek Národní galerie v Praze a evropských galerií.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Shared Master Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="hub-portal">
+
+    <!-- Ukazatel průběhu čtení -->
+    <div id="reading-progress"></div>
+
+    <!-- Horní navigační lišta -->
+    <header class="site-header">
+        <div class="nav-container-bar">
+            <a href="index.html" class="logo-group">
+                <div class="logo-symbol">🎨</div>
+                <div class="logo-text">
+                    <h1>Obrazy mistrů</h1>
+                    <span>Deník z galerií</span>
+                </div>
+            </a>
+            <nav class="nav-actions">
+                <a href="galerie_stari_mistri.html" class="nav-link-btn">🏛️ Staří mistři I</a>
+                <a href="galerie_19stoleti_mistri.html" class="nav-link-btn">✨ Mistři 19. století</a>
+                <button id="theme-toggle-btn" class="theme-toggle-btn" title="Přepnout motiv">🌙</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Hub Banner -->
+    <section class="hero hub-hero">
+        <div class="hero-content">
+            <div class="hero-badge">Virtuální kurátorský archiv & deník výstav</div>
+            <h1>Obrazy mistrů v detailech</h1>
+            <p class="lead">Hloubkový průvodce historií, ikonografií, symbolikou a zákulisím vzniku výjimečných děl českého a evropského malířství.</p>
+
+            <!-- Vyhledávač napříč všemi sbírkami -->
+            <div class="search-box-wrapper" style="margin: 24px auto 16px; max-width: 580px;">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="hub-search-input" class="search-input" placeholder="Hledat napříč všemi 25 díly (autor, dílo, technika, námět)...">
+            </div>
+
+            <!-- Statistiky sbírek -->
+            <div class="hero-stats-row">
+                <div class="hero-stat-pill"><strong>2</strong> stálé výstavy</div>
+                <div class="hero-stat-pill"><strong>25</strong> detailních rozborů děl</div>
+                <div class="hero-stat-pill"><strong>17</strong> mistrů malby</div>
+                <div class="hero-stat-pill"><strong>16.–20.</strong> století</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hlavní obsah -->
+    <main class="container">
+
+        <!-- Dynamický kontejner pro výsledky vyhledávání na indexu -->
+        <div id="hub-search-results" style="display: none; margin-top: 40px;"></div>
+
+        <!-- Sekce Výstavy -->
+        <section id="exhibitions-section">
+            <div style="margin-top: 50px; text-align: center;">
+                <h2 style="font-size: 2rem; margin-bottom: 8px;">Dostupné sbírky a výstavy</h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem;">Zvolte expozici pro zobrazení kompletních rozborů, metadat a reprodukcí v plném rozlišení.</p>
+            </div>
+
+            <div class="exhibitions-grid">
+
+                <!-- Karta 1: Staří mistři -->
+                <a href="galerie_stari_mistri.html" class="exhibition-card">
+                    <div class="exhibition-banner">
+                        <img class="exhibition-img" src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Doménikos_Theotokópulos_(called_El_Greco)_-_Christ_in_Prayer_-_Google_Art_Project.jpg" alt="Staří mistři I" loading="lazy">
+                        <div class="exhibition-overlay">
+                            <span class="exhibition-badge">7 vybraných děl</span>
+                        </div>
+                    </div>
+                    <div class="exhibition-body">
+                        <div class="exhibition-date">Červenec 2026 • Národní galerie Praha</div>
+                        <h3 class="exhibition-title">Staří mistři I</h3>
+                        <p class="exhibition-desc">Výběr z vrcholných děl evropského manýrismu, severského romanismu a barokního šerosvitu. El Greco, Michiel Coxcie, J. J. Hartmann, Piazzetta, Brand a Jan van Goyen.</p>
+                        <div class="exhibition-footer">
+                            <span class="exhibition-count">16.–18. století • Palác Schwarzenberg</span>
+                            <span class="exhibition-btn">Vstoupit do výstavy →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Karta 2: Mistři 19. století -->
+                <a href="galerie_19stoleti_mistri.html" class="exhibition-card">
+                    <div class="exhibition-banner">
+                        <img class="exhibition-img" src="gallery_pics/Jakub_Schikaneder_-_Murder_in_the_House.JPG" alt="Mistři 19. století a počátky moderny" loading="lazy">
+                        <div class="exhibition-overlay">
+                            <span class="exhibition-badge">18 vybraných děl</span>
+                        </div>
+                    </div>
+                    <div class="exhibition-body">
+                        <div class="exhibition-date">Srpen 2026 • Národní galerie Praha</div>
+                        <h3 class="exhibition-title">Mistři 19. století a počátky moderny</h3>
+                        <p class="exhibition-desc">Fascinující cesta od empíru a biedermeieru přes francouzský a český impresionismus, severský romantismus až k počátkům abstrakce a avantgardě. Schikaneder, Slavíček, Chittussi, Kupka, Brožík a další.</p>
+                        <div class="exhibition-footer">
+                            <span class="exhibition-count">19.–20. století • Veletržní palác</span>
+                            <span class="exhibition-btn">Vstoupit do výstavy →</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Časová osa uměleckých slohů -->
+            <section class="timeline-section">
+                <div class="section-heading">
+                    <h2>Přehled uměleckých epoch a autorů</h2>
+                    <p>Chronologické ukotvení autorů a uměleckých proudů zastoupených v našich sbírkách.</p>
+                </div>
+                <div class="timeline-track">
+                    <div class="timeline-item">
+                        <div class="timeline-century">16. století</div>
+                        <div class="timeline-title">Renesance & Manýrismus</div>
+                        <div class="timeline-artists">Michiel Coxcie, Doménikos Theotokópoulos (El Greco)</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-century">17. & 18. století</div>
+                        <div class="timeline-title">Baroko & Zlatý věk</div>
+                        <div class="timeline-artists">Jan van Goyen, J. J. Hartmann, G. B. Piazzetta, J. C. Brand</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-century">1. polovina 19. stol.</div>
+                        <div class="timeline-title">Romantismus & Empír</div>
+                        <div class="timeline-artists">Antonín Machek, C. D. Friedrich, F. G. Waldmüller, Adolf Kosárek</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-century">Konec 19. století</div>
+                        <div class="timeline-title">Impresionismus & Symbolismus</div>
+                        <div class="timeline-artists">Jakub Schikaneder, Antonín Slavíček, Václav Radimský, Luigi Loir, Frans Courtens</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-century">20. století & Moderna</div>
+                        <div class="timeline-title">Abstrakce & Avantgarda</div>
+                        <div class="timeline-artists">František Kupka, František Matoušek, Josef Bolf</div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <!-- Plovoucí tlačítko nahoru -->
+    <div class="floating-actions">
+        <button id="back-to-top-btn" class="floating-btn" title="Nahoru na začátek stránky">↑</button>
+    </div>
+
+    <!-- Patička -->
+    <footer>
+        <div class="footer-content">
+            <p>Stránky slouží jako osobní dokumentace návštěv uměleckých galerií a podrobných rozborů mistrovských pláten.</p>
+            <div class="credits">Deník z galerií • Národní galerie v Praze • 2026</div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/artworks-data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

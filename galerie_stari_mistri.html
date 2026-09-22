@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staří mistři I – Průvodce vybranými díly</title>
+    <meta name="description" content="Detailní průvodce historií, ikonografií a tajemstvím děl starých mistrů (El Greco, Michiel Coxcie, Hartmann, Piazzetta, Brand, van Goyen).">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Shared Master Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-exhibition-id="stari-mistri">
+
+    <!-- Ukazatel průběhu čtení -->
+    <div id="reading-progress"></div>
+
+    <!-- Horní navigační lišta -->
+    <header class="site-header">
+        <div class="nav-container-bar">
+            <a href="index.html" class="logo-group">
+                <div class="logo-symbol">🏛️</div>
+                <div class="logo-text">
+                    <h1>Staří mistři I</h1>
+                    <span>Deník z galerií</span>
+                </div>
+            </a>
+            <nav class="nav-actions">
+                <a href="index.html" class="nav-link-btn">← Přehled výstav</a>
+                <a href="galerie_19stoleti_mistri.html" class="nav-link-btn">Mistři 19. století →</a>
+                <button id="theme-toggle-btn" class="theme-toggle-btn" title="Přepnout motiv">🌙</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Header -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Sbírky starého evropského a českého umění 16.–18. století</div>
+            <h1>Staří mistři v obrazech</h1>
+            <p class="lead">Detailní průvodce historií, ikonografií, symbolikou a procesem tvorby mistrovských pláten ze sbírek Národní galerie v Praze.</p>
+            <div class="hero-stats-row">
+                <div class="hero-stat-pill"><strong>7</strong> mistrovských děl</div>
+                <div class="hero-stat-pill"><strong>6</strong> velkých mistrů</div>
+                <div class="hero-stat-pill"><strong>3</strong> roviny rozboru ke každému dílu</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ovládací a vyhledávací lišta -->
+    <div class="control-bar-wrapper">
+        <div class="control-bar">
+            <div class="control-bar-top">
+                <!-- Vyhledávací pole -->
+                <div class="search-box-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="search-input" class="search-input" placeholder="Hledat v této výstavě (autor, námět, technika)...">
+                    <button id="search-clear-btn" class="search-clear-btn" title="Vymazat hledání">✕</button>
+                </div>
+
+                <!-- Přepínač zobrazení -->
+                <div class="view-switcher">
+                    <button class="view-btn active" data-view="detail" title="Detailní kurátorský rozbor">📖 Detail</button>
+                    <button class="view-btn" data-view="grid" title="Přehledná vizuální galerie">🖼️ Mřížka</button>
+                    <button class="view-btn" data-view="reading" title="Zjednodušený čtecí mód">📄 Čtení</button>
+                </div>
+            </div>
+
+            <!-- Filtry stylů -->
+            <div class="filter-tags-row">
+                <span class="filter-label">Období:</span>
+                <button class="filter-chip active" data-filter="all">Všechna díla (7)</button>
+                <button class="filter-chip" data-filter="Renesance">Renesance</button>
+                <button class="filter-chip" data-filter="Manýrismus">Manýrismus</button>
+                <button class="filter-chip" data-filter="Baroko">Baroko</button>
+                <button class="filter-chip" data-filter="Klasicismus/Romantismus">18. století</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rychlý rozcestník děl (Table of Contents) -->
+    <div class="toc-bar-wrapper">
+        <nav class="toc-bar">
+            <span class="filter-label" style="margin-right:6px;">Rychlý skok:</span>
+            <a class="toc-link" href="#el-greco">1. El Greco</a>
+            <a class="toc-link" href="#coxie-patmos">2. Michiel Coxcie (Patmos)</a>
+            <a class="toc-link" href="#coxie-muceni">3. Michiel Coxcie (Mučení)</a>
+            <a class="toc-link" href="#hartmann">4. J. J. Hartmann</a>
+            <a class="toc-link" href="#piazzetta">5. G. B. Piazzetta</a>
+            <a class="toc-link" href="#brand">6. J. C. Brand</a>
+            <a class="toc-link" href="#goyen">7. Jan van Goyen</a>
+        </nav>
+    </div>
+
+    <!-- Hlavní kontejner s obrazy -->
+    <main class="container">
+        <div class="results-info">
+            <span id="results-count">Zobrazeno 7 ze 7 děl</span>
+            <span style="font-size: 0.8rem;">💡 Tip: Kliknutím na obraz otevřete lupu s vysokým rozlišením</span>
+        </div>
+
+        <div id="artworks-container" class="artworks-list">
+            <!-- Dynamicky generováno skriptem app.js z artworks-data.js -->
+            <noscript>
+                <p style="padding: 40px; text-align: center;">Pro zobrazení galerie prosím povolte JavaScript ve svém prohlížeči.</p>
+            </noscript>
+        </div>
+    </main>
+
+    <!-- Plovoucí tlačítko zpět nahoru -->
+    <div class="floating-actions">
+        <button id="back-to-top-btn" class="floating-btn" title="Nahoru na začátek stránky">↑</button>
+    </div>
+
+    <!-- Patička -->
+    <footer>
+        <div class="footer-content">
+            <p>Tento dokument byl vytvořen jako přehledový průvodce mistrovskými díly evropského a středoevropského umění 16.–18. století.</p>
+            <div class="credits">Dokumentace uměleckých děl • Národní galerie v Praze / Staré umění</div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/artworks-data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

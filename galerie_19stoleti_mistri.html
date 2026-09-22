@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mistři 19. století a počátky moderny – Průvodce výstavou</title>
+    <meta name="description" content="Detailní průvodce uměním 19. století a počátků moderny ze sbírek Národní galerie v Praze (Schikaneder, Slavíček, Chittussi, Kupka, Friedrich, Radimský...).">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Shared Master Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-exhibition-id="19-stoleti">
+
+    <!-- Ukazatel průběhu čtení -->
+    <div id="reading-progress"></div>
+
+    <!-- Horní navigační lišta -->
+    <header class="site-header">
+        <div class="nav-container-bar">
+            <a href="index.html" class="logo-group">
+                <div class="logo-symbol">✨</div>
+                <div class="logo-text">
+                    <h1>Mistři 19. století</h1>
+                    <span>Deník z galerií</span>
+                </div>
+            </a>
+            <nav class="nav-actions">
+                <a href="index.html" class="nav-link-btn">← Přehled výstav</a>
+                <a href="galerie_stari_mistri.html" class="nav-link-btn">Staří mistři I →</a>
+                <button id="theme-toggle-btn" class="theme-toggle-btn" title="Přepnout motiv">🌙</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Header -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Sbírky 19. století a počátků moderny • Národní galerie Praha</div>
+            <h1>Mistři 19. století & moderny</h1>
+            <p class="lead">Od empírového portrétu přes romantismus, pařížské a české impresionistické plenéry až po avantgardní experimenty.</p>
+            <div class="hero-stats-row">
+                <div class="hero-stat-pill"><strong>18</strong> mistrovských děl</div>
+                <div class="hero-stat-pill"><strong>14</strong> autorů</div>
+                <div class="hero-stat-pill"><strong>3</strong> speciální inspirativní rozbory</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ovládací a vyhledávací lišta -->
+    <div class="control-bar-wrapper">
+        <div class="control-bar">
+            <div class="control-bar-top">
+                <!-- Vyhledávací pole -->
+                <div class="search-box-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="search-input" class="search-input" placeholder="Hledat v této výstavě (autor, námět, město, technika)...">
+                    <button id="search-clear-btn" class="search-clear-btn" title="Vymazat hledání">✕</button>
+                </div>
+
+                <!-- Přepínač zobrazení -->
+                <div class="view-switcher">
+                    <button class="view-btn active" data-view="detail" title="Detailní kurátorský rozbor">📖 Detail</button>
+                    <button class="view-btn" data-view="grid" title="Přehledná vizuální galerie">🖼️ Mřížka</button>
+                    <button class="view-btn" data-view="reading" title="Zjednodušený čtecí mód">📄 Čtení</button>
+                </div>
+            </div>
+
+            <!-- Filtry stylů -->
+            <div class="filter-tags-row">
+                <span class="filter-label">Styl:</span>
+                <button class="filter-chip active" data-filter="all">Všechna díla (18)</button>
+                <button class="filter-chip" data-filter="Klasicismus/Romantismus">Romantismus / Empír</button>
+                <button class="filter-chip" data-filter="Biedermeier">Biedermeier</button>
+                <button class="filter-chip" data-filter="Impresionismus">Impresionismus / Luminismus</button>
+                <button class="filter-chip" data-filter="Realismus/Symbolismus">Realismus / Symbolismus</button>
+                <button class="filter-chip" data-filter="Moderna/Avantgarda">Moderna & Inspirace</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rychlý rozcestník děl (Table of Contents) -->
+    <div class="toc-bar-wrapper">
+        <nav class="toc-bar">
+            <span class="filter-label" style="margin-right:6px;">Rychlý skok:</span>
+            <a class="toc-link" href="#machek">1. A. Machek</a>
+            <a class="toc-link" href="#brozik">2. V. Brožík</a>
+            <a class="toc-link" href="#waldmuller">3. F. G. Waldmüller</a>
+            <a class="toc-link" href="#schikaneder-vrazda">4. J. Schikaneder (Vražda)</a>
+            <a class="toc-link" href="#loir">5. L. Loir</a>
+            <a class="toc-link" href="#schikaneder-hradcany">6. J. Schikaneder (Hradčany)</a>
+            <a class="toc-link" href="#slavicek">7. A. Slavíček</a>
+            <a class="toc-link" href="#chittussi">8. A. Chittussi</a>
+            <a class="toc-link" href="#radimsky">9. V. Radimský</a>
+            <a class="toc-link" href="#courtens">10. F. Courtens</a>
+            <a class="toc-link" href="#hudecek">11. A. Hudeček</a>
+            <a class="toc-link" href="#kupka">12. F. Kupka</a>
+            <a class="toc-link" href="#friedrich">13. C. D. Friedrich</a>
+            <a class="toc-link" href="#kosarek">14. A. Kosárek</a>
+            <a class="toc-link" href="#liska">15. E. K. Liška</a>
+            <a class="toc-link" href="#matousek1" style="border-color: var(--accent-gold); font-weight: 600;">Inspirace</a>
+        </nav>
+    </div>
+
+    <!-- Hlavní kontejner s obrazy -->
+    <main class="container">
+        <div class="results-info">
+            <span id="results-count">Zobrazeno 18 z 18 děl</span>
+            <span style="font-size: 0.8rem;">💡 Tip: Kliknutím na obraz otevřete lupu s vysokým rozlišením</span>
+        </div>
+
+        <div id="artworks-container" class="artworks-list">
+            <!-- Dynamicky generováno skriptem app.js z artworks-data.js -->
+            <noscript>
+                <p style="padding: 40px; text-align: center;">Pro zobrazení galerie prosím povolte JavaScript ve svém prohlížeči.</p>
+            </noscript>
+        </div>
+    </main>
+
+    <!-- Plovoucí tlačítko zpět nahoru -->
+    <div class="floating-actions">
+        <button id="back-to-top-btn" class="floating-btn" title="Nahoru na začátek stránky">↑</button>
+    </div>
+
+    <!-- Patička -->
+    <footer>
+        <div class="footer-content">
+            <p>Tento dokument byl vytvořen jako přehledový průvodce expozicí 19. století a počátků moderního umění.</p>
+            <div class="credits">Dokumentace uměleckých děl • Národní galerie v Praze</div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/artworks-data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
